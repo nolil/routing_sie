@@ -5,7 +5,7 @@ import { slide as Menu } from 'react-burger-menu'
 
 class Burger extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
   showSettings (event) {
     event.preventDefault();
