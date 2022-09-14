@@ -32,7 +32,9 @@ function App(){
   useEffect(() => {
     if(state.login === false && cookies.get('valueLogin') !== ''){
       setState({...state, login: cookies.get('setLogin'), valueLogin: cookies.get('login'), valuePass: cookies.get('password')});
-        
+    }
+    if(!cookies.get('setLogin')){
+      setState({...state, valueLogin: cookies.get('loginSaved'), valuePass: cookies.get('passwordSaved')})
     }
   }, []);
   

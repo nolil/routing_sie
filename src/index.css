@@ -8,6 +8,10 @@ body{
   width: 100%;
   overflow-y: scroll;
 }
+h1, h2, h3, h4, h5, h6, h7{
+  padding: 0;
+  margin: 0;
+}
 .pre-loading{
   top: 0;
   left: 0;

@@ -39,6 +39,16 @@ function Links( {href = "/", linksValue = "Ссылка", linksName} ) {
     </Link>
     )
 }
+function LinksText( {href = "/", linksValue = "Ссылка", linksName} ) {
+  return(
+    <Link 
+      className={"links-text " + linksName}  
+      to={href}
+    >
+      {linksValue}
+    </Link>
+    )
+}
 function LinksBack( {linksBackValue = "<- Назад", linksBack, buttonName, linksName} ) {
   return(
     <div className={"d-flex justify-content-end " + linksBack } >
@@ -140,4 +150,4 @@ function LayoutIndex({state, setState, cookies}) {
     );
 }
 
-export { LayoutIndex, Links, LinksBack, Button};
+export { LayoutIndex, Links, LinksText, LinksBack, Button};

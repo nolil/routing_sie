@@ -6,6 +6,7 @@
 
 /* button */
 .button {
+  position: relative;
   border: none;
   background-color: #0099cc;
   color: #ffffff;
@@ -30,6 +31,9 @@
   text-decoration: inherit;
   color: inherit;
 }
+.links-text{
+  color: #0062e3;
+}
 
 /* components */
 .links-back{
@@ -38,6 +42,13 @@
   color: white;
 }
 
+.img-links{
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  width: 10px;
+  
+}
 /* header */
   /* nav-link */
   .navbar [class$="brand"]{
@@ -123,7 +134,6 @@
 }
 .bg-outLogin{
   position: absolute;
-  top: 53px;
   left: 0;
   font-size: 12px;
   background: #666;
@@ -132,11 +142,12 @@
 .header-burger{
   height: 100%;
 }
-.bg-title{
+.bg-title{;
   color: inherit;
   padding: 10px 0 0 0;
 }
 .bg-user-name{
+  position: relative;
   color: #aaa;
 }
 .menu-item{ /* ссылки */

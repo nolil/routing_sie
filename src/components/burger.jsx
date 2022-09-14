@@ -6,18 +6,19 @@ import { slide as Menu } from 'react-burger-menu'
 class Burger extends React.Component {
   constructor(props) {
     super(props);
+    console.log('react update')
   }
   showSettings (event) {
     event.preventDefault();
   }
   out(){
-   this.props.setState({...this.props.state, outLogin: true})  
+   this.props.setState({...this.props.state, outLogin: true}) 
   }
-
   render () {
     // NOTE: You also need to provide styles, see https://github.com/negomi/react-burger-menu#styling
+    
     return (
-      <>
+      <> 
       <Menu 
       disableAutoFocus
       >
@@ -25,9 +26,15 @@ class Burger extends React.Component {
         <h1 className="bg-title">Nolil</h1>
         {this.props.state.login ?
           <> 
-            <Button buttonName="bg-outLogin" buttonValue="выйти" buttonOnClick={() => this.out()}/>
+            
            { this.props.state.outLogin === true ? <OutLogin state={this.props.state} setState={this.props.setState} cookies={this.props.cookies}/> : null}
-            <div className="bg-user-name">account: <div className="login-true">{this.props.state.valueLogin}</div></div>
+            <div className="bg-user-name">
+              <Button buttonName="bg-outLogin" buttonValue="выйти" buttonOnClick={() => this.out()}/>
+              account: 
+                <div className="login-true">
+                  {this.props.state.valueLogin}
+                </div>
+            </div>
           </>
         :
           <div className="bg-login">

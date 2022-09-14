@@ -4,6 +4,7 @@
 .container {}
 /* pages */
 [class^="page"] {
+  position: a;
   color: #444;
   background: white;
   padding: 10px 20px;
@@ -40,6 +41,7 @@
   min-width: 300px;
 }
 .page-login label {
+  margin-top: 10px;
   width: 100%;
   margin-bottom: 5px;
 }
@@ -65,9 +67,20 @@
   height: 40px;
   width: 100%;
 }
-
-
-
+.login-tittle-viwe{
+  display: grid;
+  align-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 70%;
+  height: 45%;
+  border-radius: 12px;
+  background: rgb(240, 240, 240, 0.90);
+}
 
 
 @media screen and (max-width: 800px) {

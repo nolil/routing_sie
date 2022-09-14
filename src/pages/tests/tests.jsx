@@ -1,5 +1,6 @@
 import React from "react";
 import { LinksBack, Links, Button } from "../../components/layout-component";
+import link from '../../095-link-2.svg';
 
 function Tests({state, setState, navigate}) {
   
@@ -13,9 +14,14 @@ function Tests({state, setState, navigate}) {
           <>
             <div className="tests-navigation">
                <div>
-                <Button buttonValue={<Links href="/tests/useState" 
-                linksValue="useState" />}/>
-                <b>useState</b> нужен для обнавление компонента и изменение разного, пример этого сщечик
+                  <Button buttonValue={
+                    <>
+                      <img className="img-links" width="14px" height="14px" src={link} alt="link" />
+                      <Links href="/tests/useState" 
+                      linksValue="useState" />
+                    </>
+                  }/>
+                  <b>useState</b> нужен для обнавление компонента и изменение разного, пример этого сщечик
                </div>
             </div>
             <LinksBack linksBackValue="<- Назад"/>

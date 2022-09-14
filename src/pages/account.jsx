@@ -1,4 +1,4 @@
-import { LinksBack, Links, Button } from "../components/layout-component";
+import { LinksBack, LinksText, Button } from "../components/layout-component";
 function OutLogin({cookies, setState, state}){
     console.log(state);
     if(state.login){
@@ -17,7 +17,7 @@ function Account({state, setState, navigate, cookies}) {
       <div className="page-login">
       <h1>Это твой аккаунт: {state.valueLogin}</h1>
       <h1>Это твой пароль: {state.valuePass}</h1>
-      <div>теперь ты можешь попасть в <Links href="/tests" linksValue={<u>tests</u>} /> и его категории</div>
+      <div>теперь ты можешь попасть в <LinksText href="/tests" linksValue={<u>tests</u>} /> и его категории</div>
         <Button buttonValue="выйти из аккаунта" buttonOnClick={() => OutLogin({cookies, setState, state})}/>
         <LinksBack linksBackValue="<- Назад"/>
       </div>  
